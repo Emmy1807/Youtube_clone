@@ -1,14 +1,17 @@
 "use client"
 
-import React from 'react'
+import React, { useContext } from 'react'
 import { SearchVideos } from '@/util/fetchData'
 import { useState } from 'react'
 import Image from 'next/image'
+import { SearchContext } from '@/contexts/searchcontext'
 
 const SearchBar = () => {
 
+  const { result, setResult } = useContext(SearchContext);
+
   const [loading, setLoading] = useState(false)
-  const [result, setResult] = useState([])
+  // const [result, setResult] = useState([])
   const [query, setQuery] = useState("") 
 
   const handleSearch = async (e) => {
@@ -22,6 +25,28 @@ const SearchBar = () => {
   }
 
     
+    // const VideoPlayer = ({ video }) => {
+    //   if ( !video) return
+    //   <div>Loading...</div>;
+
+    //   const videoSrc = `"https://www.youtube.com/embed/${video.id.videoId}`;
+    //   return (
+    //     <div>
+    //       <iframe 
+    //       src={videoSrc}
+    //       title="Video Player"
+    //       width="100%"
+    //       height="500px"
+    //       frameborder="0"
+    //       ></iframe>
+    //       <h3>{video.snippet.title}</h3>
+
+    //       <p>{video.snippet.description}</p>
+    //     </div>
+    //   );
+    // };
+    
+
   return (
     <div>
     <form onSubmit={handleSearch}> 
@@ -48,6 +73,8 @@ const SearchBar = () => {
       </div>
     ))
   }    
+
+  
     </div>
       
   )

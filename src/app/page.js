@@ -12,7 +12,7 @@ export default function Home() {
     <div className="container Page_container">
       <Navbar/>
 
-    <div>
+    <div className="con">
       <SideBar/>
       <Feeds cou={count}/>
       

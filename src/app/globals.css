@@ -7,8 +7,14 @@
   flex-direction: column;
   gap: 30px;
 }
-.Page_container div{
+/* .Page_container div{
   display: flex;
   gap: 15px;
   margin-left: 28px;
+  padding: 0 5vw; */
+
+.con{
+  display: flex;
+  justify-content: space-between;
+  gap: 15%;
 }

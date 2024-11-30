@@ -64,14 +64,14 @@ const SearchBar = () => {
   }  
 
   {
-    result.map((eachItem, index, array) => (
-      <div key={index}>
-        <h1>{eachItem.title}</h1>
-        <h2>{eachItem.video_length}</h2>
-        <h3>{eachItem.number_of_views}</h3>
-        <img src={eachItem.thumbnails[0].url} alt="image" />
-      </div>
-    ))
+    //  result.map((eachItem, index, array) => (
+    //    <div key={index}>
+    //      <h1>{eachItem.title}</h1>
+    //      <h2>{eachItem.video_length}</h2>
+    //      <h3>{eachItem.number_of_views}</h3>
+    //      <img src={eachItem.thumbnails[0].url} alt="image" />
+    //    </div>
+     //))
   }    
 
   

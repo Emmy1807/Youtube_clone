@@ -1,0 +1,33 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    width: 30%;
+    height: 320px;
+}
+.container img{
+    height: 181px;
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    justify-content: space-evenly;
+}
+.container h1{
+    font-size: 19px;
+    font-weight: 500;
+}
+.container h2{
+    font-size: 15.5px;
+    font-weight: lighter;
+    color: rgb(71, 71, 71);
+}
+.container h3{
+    font-size: 15px;
+    font-weight: lighter;
+    color: rgb(43, 43, 43);
+}

@@ -1,0 +1,16 @@
+.SideBar{
+    width: 240px;
+    background-color: blue;
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.section{
+    margin-bottom: 20px;
+}
+.item{
+    display: flex;
+    align-items: center;
+    padding: 10px 5px;
+    cursor: pointer;
+}

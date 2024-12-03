@@ -48,19 +48,38 @@ const SearchBar = () => {
     
 
   return (
-    <div>
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        border: "1px solid #ccc",
+        borderRadius: "20px",
+        padding: "5px 10px",
+        width: "520px",
+        marginLeft: "120px"
+      }}
+    >
     <form onSubmit={handleSearch}> 
-      <input type="text" placeholder='Search...' 
+      <input type="text" placeholder='Search...'
+      style={{
+        flex: 1,
+        border: "none",
+        fontSize: "14px",
+        padding: "5px",
+        backgroundColor: "transparent",
+        width: "475px"
+      }} 
        value={query}
        onChange={(e) =>setQuery(e.target.value)}
        />
     <button>
-        Search
+        <Image src='/download (22).png' width={20} height={20}
+        alt='image'/>
     </button>
     </form>  
 
   {
-    loading ? <p>Loading</p> : null
+    loading ?  <p></p> : null
   }  
 
   {

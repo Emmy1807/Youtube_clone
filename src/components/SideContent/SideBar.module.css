@@ -1,16 +1,34 @@
 .SideBar{
     width: 240px;
-    background-color: blue;
+    background-color: blu;
     height: 100vh;
-    overflow-y: scroll;
-    overflow-x: hidden;
 }
 .section{
     margin-bottom: 20px;
+    padding: 8px;
+    
 }
 .item{
-    display: flex;
-    align-items: center;
+    /* display: flex;
+    align-items: center; */
     padding: 10px 5px;
     cursor: pointer;
+}
+.item img{
+    padding-left: 10px;
+    height: 20px;
+    width: 30px;
+}
+.item h3{
+    font-size: 18px;
+    font-weight: 500;
+}
+.item p{
+    font-size: small;
+    font-weight: 400;
+}
+.item h1{
+    font-size: small;
+    font-weight: 400;
+    padding-left: 6px;
 }

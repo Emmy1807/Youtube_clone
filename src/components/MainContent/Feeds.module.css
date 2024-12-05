@@ -2,8 +2,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    background-color: brow;
+    background-color: brown;
     width: 85%;
+    height: auto;
+    border-radius: 10px;
 }
 .content{
     display: flex;

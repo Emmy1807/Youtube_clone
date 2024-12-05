@@ -1,4 +1,4 @@
-import React, { useContext, useState} from 'react'
+import React, { useContext, useRef, useState} from 'react'
 import { SearchContext } from '@/contexts/searchcontext'
 import styles from './Feeds.module.css'
 
@@ -12,6 +12,27 @@ const Feeds = ({cou}) => {
     setPlayingVideo(params)
 
   }
+
+  // function FullscreenPlayer() {
+  //   const videoRef = useRef();
+
+  //   const enterFullscreeen = () => {
+  //     if
+  //     (videoRef.current.requestFullscreen) {
+
+  //      videoRef.current.requestFullscreen();
+
+  //    } else if
+  //    (videoRef.current.webkitRequestFullscreen) {
+  //     videoRef.current.webkitRequestFullscreen();
+
+  //    } else if
+  //    (videoRef.current.msRequestFullscreen) {
+  //     videoRef.current.msRequestFullscreen();
+  //    }
+  //   };
+  // }
+
   return (
     <div className={styles.container}>
       {
@@ -43,5 +64,6 @@ const Feeds = ({cou}) => {
       </div>
   )
 }
+
 
 export default Feeds

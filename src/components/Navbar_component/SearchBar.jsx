@@ -48,6 +48,7 @@ const SearchBar = () => {
     
 
   return (
+    <div>
     <div
       style={{
         display: "flex",
@@ -56,7 +57,7 @@ const SearchBar = () => {
         borderRadius: "20px",
         padding: "5px 10px",
         width: "520px",
-        marginLeft: "120px"
+        marginLeft: "120px",
       }}
     >
     <form onSubmit={handleSearch}> 
@@ -78,10 +79,11 @@ const SearchBar = () => {
     </button>
     </form>  
 
+    </div>
   {
     loading ?  <p></p> : null
   }  
-
+  
   {
     //  result.map((eachItem, index, array) => (
     //    <div key={index}>
@@ -94,7 +96,8 @@ const SearchBar = () => {
   }    
 
   
-    </div>
+    
+  </div>
       
   )
 }

@@ -1,5 +1,28 @@
-.SideBar{
-    width: 240px;
-    background-color: blue;
-    height: 100vh;
+.section{
+    margin-bottom: 20px;
+    padding: 8px;
+    width: 250px;
+    
+}
+.Sidebar{
+    background-color: blu;
+    overflow-y: scroll;
+    height: 200vh;
+    table-layout: fixed;
+}
+.item{
+    display: flex;
+    align-items: center;
+    padding: 10px 5px;
+    cursor: pointer;
+    gap: 15px;
+}
+.item img{
+    padding-left: 10px;
+    height: 20px;
+    width: 30px;
+}
+.item p{
+    font-size: 16px;
+    font-weight: 400;
 }

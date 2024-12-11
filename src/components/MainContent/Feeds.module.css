@@ -2,10 +2,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    background-color: brown;
-    width: 85%;
+    width: 88%;
     height: auto;
     border-radius: 10px;
+    /* overflow-y: scroll;
+    overflow-x: scroll;
+    table-layout: fixed; */
 }
 .content{
     display: flex;

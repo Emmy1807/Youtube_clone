@@ -8,11 +8,20 @@ const Feeds = ({cou}) => {
   const [ playingVideo, setPlayingVideo ] = useState(null) // state to
   // track video playing
 
+const [hoveredVideo, setHoveredVideo] = useState(null)
+
   const handleplayVideo =(params)=>{
     setPlayingVideo(params)
 
   }
 
+  const handleMouseEnter =(videoId) =>{
+    setHoveredVideo(videoId)
+  }
+
+  const handleMouseLeave =() =>{
+    setHoveredVideo(null)
+  }
   // function FullscreenPlayer() {
   //   const videoRef = useRef();
 
@@ -39,25 +48,41 @@ const Feeds = ({cou}) => {
         result.map((eachItem, index, array) => (
        <div key={index} className={styles.content}>
        {
+
+        hoveredVideo === eachItem.video_Id ?(
+        <iframe 
+        src={`https://www.youtube.com/embed/${eachItem.video_id}?autoplay=1`}
+        allow="autoplay"
+        allowFullScreen
+        >
+        </iframe>
+
+        ):
+
         playingVideo === eachItem.video_id ?
         <iframe
-        src={`https://www.youtube.com/embed/${eachItem.video_id}`}
+        src={`https://www.youtube.com/embed/${eachItem.video_id}?autoplay=1`}
+        allow="autoplay"
+        allowFullScreen
         // frameborder="0"
         >
         </iframe>
         :
         (
-          <div>
+         <div>
           <img src={eachItem.thumbnails[0].url} alt="image" onClick=
-          {() => handleplayVideo(eachItem.video_id)}/>
+          {() => handleplayVideo(eachItem.video_id)}
+          onMouseEnter={() =>handleMouseEnter(eachItem.video_id)}
+          onMouseLeave={() =>handleMouseLeave}/>
+         </div> 
+        )
+      }
          <h1>{eachItem.title}</h1>
          {/* <p>{eachItem.description}</p> */}
          <h2>{eachItem.video_length}</h2>
          <h3>{eachItem.number_of_views} views . {eachItem.published_time}</h3>
          {/* <img src={eachItem.thumbnails[0].url} alt="image" /> */}
-       </div>
-        )
-       } 
+      
        </div>
         ))
       }

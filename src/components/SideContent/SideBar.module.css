@@ -1,11 +1,13 @@
 .SideBar{
-    width: 240px;
+    width: 100px;
     background-color: blu;
     height: 100vh;
+
 }
 .section{
     margin-bottom: 20px;
     padding: 8px;
+    background-color: blueviole;
     
 }
 .item{

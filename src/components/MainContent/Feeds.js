@@ -1,6 +1,8 @@
 import React, { useContext, useRef, useState} from 'react'
 import { SearchContext } from '@/contexts/searchcontext'
 import styles from './Feeds.module.css'
+import { getSubtitle } from '@/util/fetchData'
+import NavbarScroll from '../Navbar_component/NavbarScroll'
 
 const Feeds = ({cou}) => {
 
@@ -22,28 +24,36 @@ const [hoveredVideo, setHoveredVideo] = useState(null)
   const handleMouseLeave =() =>{
     setHoveredVideo(null)
   }
-  // function FullscreenPlayer() {
-  //   const videoRef = useRef();
 
-  //   const enterFullscreeen = () => {
-  //     if
-  //     (videoRef.current.requestFullscreen) {
+  // const handleShowSubtitle = ({ url, subtitles }) => {
+  //   const [currentSubtitle, setCurrentSubtitle] = useState("");
+  //   const playerRef = useRef(null);
 
-  //      videoRef.current.requestFullscreen();
+  //   const handleProgress = (state) => {
+  //     const currentTime = state.playedSeconds;
 
-  //    } else if
-  //    (videoRef.current.webkitRequestFullscreen) {
-  //     videoRef.current.webkitRequestFullscreen();
-
-  //    } else if
-  //    (videoRef.current.msRequestFullscreen) {
-  //     videoRef.current.msRequestFullscreen();
-  //    }
-  //   };
+  //     const subtitle = subtitles.find(
+  //       (s) => currentTime >= s.start && currentTime <= s.end
+  //     );
+  //     setCurrentSubtitle(subtitle ? subtitle.text : "");
+  //   }
   // }
 
+    // console.log(subtitle);
   return (
+    
     <div className={styles.container}>
+      <div>
+      <NavbarScroll/>
+      </div>
+      {/* <getSubtitle
+      ref={playerRef}
+      url={url}
+      playing
+      controls
+      onProgress={handleProgress}
+      width="100%"
+      /> */}
       {
         result.map((eachItem, index, array) => (
        <div key={index} className={styles.content}>
@@ -70,9 +80,8 @@ const [hoveredVideo, setHoveredVideo] = useState(null)
         :
         (
          <div>
-          <img src={eachItem.thumbnails[0].url} alt="image" onClick=
-          {() => handleplayVideo(eachItem.video_id)}
-          onMouseEnter={() =>handleMouseEnter(eachItem.video_id)}
+          <img src={eachItem.thumbnails[0].url} alt="image" onClick={() => handleplayVideo(eachItem.video_id)}
+          onMouseEnter={() =>handleMouseEnter(eachItem.video_id) && handleShowSubtitle(eachItem.video_id)}
           onMouseLeave={() =>handleMouseLeave}/>
          </div> 
         )

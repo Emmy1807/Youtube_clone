@@ -15,9 +15,9 @@ const Navbar = () => {
     }
 
     return (
-        <div className='flex gap-14 mt-5'>
+        <div className='flex gap-14 mt- h-20 bg-white fixed'>
 
-            <div className='flex items-center gap-3 ml-5 '>
+            <div className='flex items-center gap-3 ml-5 mb-1'>
                 <div className='ham'>
             <RxHamburgerMenu onClick={handleChange}/>
                 </div>
@@ -35,6 +35,7 @@ const Navbar = () => {
              alt='image'/>
             
            </div>
+           
            <div className='not'>
            <div className='video'>
             <img src='/vd.gif' width={25} height={10}

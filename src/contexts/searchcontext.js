@@ -1,6 +1,7 @@
 "use client"
 import { createContext, useState, useEffect } from "react";
 import { SearchVideos } from "@/util/fetchData";
+import { trendingVideos } from "@/util/fetchData";
 
 export const SearchContext = createContext(); // initializing a context called searchContext"
 
@@ -9,7 +10,7 @@ export const SearchProvider = ({children}) =>{
 
     useEffect(()=>{
         const fetchDefaultVideos = async()=>{
-            const data = await SearchVideos('search/?query=trending')
+            const data = await trendingVideos()
             setResult(data.videos)
         }
         fetchDefaultVideos();

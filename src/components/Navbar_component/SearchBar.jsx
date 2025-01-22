@@ -56,8 +56,9 @@ const SearchBar = () => {
         border: "1px solid #ccc",
         borderRadius: "20px",
         padding: "5px 10px",
-        width: "520px",
+        width: "550px",
         marginLeft: "120px",
+        // marginBottom: "50px"
       }}
     >
     <form onSubmit={handleSearch}> 
@@ -68,7 +69,7 @@ const SearchBar = () => {
         fontSize: "14px",
         padding: "5px",
         backgroundColor: "transparent",
-        width: "475px"
+        width: "495px"
       }} 
        value={query}
        onChange={(e) =>setQuery(e.target.value)}
@@ -92,7 +93,7 @@ const SearchBar = () => {
     //      <h3>{eachItem.number_of_views}</h3>
     //      <img src={eachItem.thumbnails[0].url} alt="image" />
     //    </div>
-     //))
+    //  ))
   }    
 
   
